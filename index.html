@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ratan Budha's student portfolio featuring programming, game development, and academic projects.">
+  <title>Ratan | Student Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #f1f5f9;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 18px 8%;
+      background: #111b30;
+      border-bottom: 1px solid #25344d;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      color: #5eead4;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a:hover,
+    .socials a:hover {
+      color: #5eead4;
+    }
+
+    .hero {
+      min-height: 75vh;
+      padding: 90px 8%;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(
+        circle at top right,
+        #173d49,
+        #0b1120 55%
+      );
+    }
+
+    .hero-content {
+      max-width: 780px;
+    }
+
+    .label {
+      color: #5eead4;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.15;
+      margin: 18px 0;
+    }
+
+    h1 span,
+    .accent {
+      color: #5eead4;
+    }
+
+    .hero p {
+      color: #bdc9dc;
+      font-size: 18px;
+      max-width: 650px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #5eead4;
+      color: #07131b;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 25px;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: #99f6e4;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: #5eead4;
+      border: 1px solid #5eead4;
+      margin-left: 10px;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .section-description {
+      color: #aab8ce;
+      margin-bottom: 30px;
+    }
+
+    .about-box,
+    .card,
+    .contact-box {
+      background: #111b30;
+      border: 1px solid #25344d;
+      border-radius: 15px;
+      padding: 25px;
+    }
+
+    .about-box p,
+    .card p,
+    .contact-box p {
+      color: #bdc9dc;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit, minmax(min(100%, 240px), 1fr)
+      );
+      gap: 22px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #5eead4;
+    }
+
+    .card-icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .project-link {
+      display: inline-block;
+      color: #5eead4;
+      font-weight: bold;
+      margin-top: auto;
+      padding-top: 18px;
+    }
+
+    .skills {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background: #162840;
+      border: 1px solid #2a465e;
+      border-radius: 8px;
+      padding: 10px 16px;
+      color: #b9f7ed;
+    }
+
+    footer {
+      background: #111b30;
+      border-top: 1px solid #25344d;
+      text-align: center;
+      padding: 30px 8%;
+      color: #aab8ce;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+    }
+
+    .socials a {
+      color: #5eead4;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 16px 5%;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+
+      .button.secondary {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="#home" class="logo">RATAN.</a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="label">Student Portfolio</div>
+
+        <h1>
+          Hello, I'm Ratan.<br>
+          <span>Student &amp; Creator.</span>
+        </h1>
+
+        <p>
+          Welcome to my portfolio! I am a student from Dong-A University who enjoys
+          learning about business, technology, and programming.
+          I like creating projects, solving problems, and
+          developing new skills.
+        </p>
+
+        <a href="#projects" class="button">
+          Explore My Projects
+        </a>
+
+        <a href="#about" class="button secondary">
+          About Me
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">
+        About <span class="accent">Me</span>
+      </h2>
+
+      <p class="section-description">
+        A little introduction about myself.
+      </p>
+
+      <div class="about-box">
+        <p>
+          My name is Ratan from Nepal. I am a student living
+          in Busan, South Korea. I am interested in business,
+          programming, and creative digital projects.
+        </p>
+        <br>
+        <p>
+          I believe that learning by doing is important.
+          Through my classes and personal projects, I want
+          to improve my skills, learn from mistakes, and
+          build useful things for the future.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">
+        My <span class="accent">Projects</span>
+      </h2>
+
+      <p class="section-description">
+        My game development work and academic projects.
+      </p>
+
+      <div class="project-grid">
+
+        <article class="card">
+          <div class="card-icon">🎮</div>
+          <h3>The Sneaky Chicken — Game Elements</h3>
+          <p>
+            An original chicken game. Collect eggs,
+            avoid the farmer, and find the exit safely.
+          </p>
+          <a
+            class="project-link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer">
+            Play My Game ↗
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">📝</div>
+          <h3>AI Game Development Prompts</h3>
+          <p>
+            My documentation of the AI prompts used to plan
+            and develop The Sneaky Chicken , including
+            game rules, controls, scoring, and victory conditions.
+          </p>
+          <a
+            class="project-link"
+            href="https://docs.google.com/document/d/1kvEm8IEKm2-C85_ND6WGngE4vsb_FDy8Pq3de2XRVPg/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            View My AI Prompts ↗
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🐍</div>
+          <h3>Snake Game</h3>
+          <p>
+            A classic snake game concept where a player
+            collects apples, earns points, and tries to
+            achieve a high score.
+          </p>
+          <a class="project-link" href="https://docs.google.com/document/d/1cfvocVsmcd-STAofFEs_8DkOx_l_CT_rNZ4FL6IE6GY/edit?usp=sharing">
+            Ask About This Project ↗
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">📊</div>
+          <h3>Statistics Assignment</h3>
+          <p>
+            My studies of descriptive statistics, mean,
+            median, and how unusual values affect data.
+          </p>
+          <a class="project-link" href="#contact">
+            Ask About This Project ↗
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">
+        My <span class="accent">Skills</span>
+      </h2>
+
+      <p class="section-description">
+        Skills I am learning and developing.
+      </p>
+
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript Basics</span>
+        <span class="skill">Python Basics</span>
+        <span class="skill">R Programming</span>
+        <span class="skill">Business Management</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Creative Thinking</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">
+        Contact <span class="accent">Me</span>
+      </h2>
+
+      <p class="section-description">
+        Thank you for visiting my portfolio!
+      </p>
+
+      <div class="contact-box">
+        <p>
+          I enjoy learning new things and working on creative
+          projects. Visit my GitHub to explore my work.
+        </p>
+
+        <a
+          class="button"
+          href="https://github.com/Ayushstha0"
+          target="_blank"
+          rel="noopener noreferrer">
+          Visit My GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>RATAN.</h3>
+    <p>Student · Learner · Creator</p>
+
+    <div class="socials">
+      <a
+        href="https://github.com/Ayushstha0"
+        target="_blank"
+        rel="noopener noreferrer">
+        GitHub
+      </a>
+    </div>
+
+    <p>
+      © <span id="year">2026</span> Aayush Shrestha.
+      All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
